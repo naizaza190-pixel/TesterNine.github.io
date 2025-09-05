@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <title>To-Do List App</title>
+  <link rel="stylesheet" href="style.css">
+
+  <!-- PWA -->
+  <link rel="manifest" href="https://naizaza190-pixel/TesterNine.github.io/manifest.json">
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#3b82f6">
+</head>
+<body>
+  <div class="app">
+    <h1>📋 To-Do List</h1>
+    <div class="input-container">
+      <input type="text" id="taskInput" placeholder="เพิ่มงานใหม่...">
+      <button onclick="addTask()">เพิ่ม</button>
+    </div>
+    <ul id="taskList"></ul>
+  </div>
+
+  <script src="script.js"></script>
+
+  <script>
+    if ("serviceWorker" in navigator) {
+      navigator.serviceWorker.register("service-worker.js");
+    }
+  </script>
+</body>
+</html>
